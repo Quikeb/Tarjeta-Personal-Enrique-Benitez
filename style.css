@@ -10,26 +10,64 @@ body{
   justify-content: center;
   align-items: center;  
   height: 100vh;
-  background-color: yellow;
+  background-color: skyblue;
   padding: 1rem;
 }
 
-.card{
+img{
+  display: block;
+  width: 100%;
+}
+p{
+  font-family: sans-serif;
+}
+a{
+  text-decoration: none;
+  display: block;
+}
+button{
+  border: none;
+}
 
+.card{
+  border-radius: 1rem;
   background-color: red;
+  overflow: hidden;
+  max-width: 1200px;
 }
 .header{
   display: flex;
   justify-content: space-between;
   background-color: green;
   align-items: center;
+  padding: 1rem;
 }
+
+.brand{
+  max-width: 130px;
+}
+.icon{
+  padding: .5rem;
+  border-radius: 8px;
+  background-color: blanchedalmond;
+  box-shadow: 0 2px 2px 0 #2f195c10;}
+  
 .main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: blue;
+  background-color: cyan;
+  gap: 1rem;
+  padding: 1rem;
 }
+.main div:first-child{
+  background-color: palevioletred;
+}
+
+.main div:last-child{
+  background-color: lightsalmon;
+}
+
 .footer{
   display: flex;
   justify-content: space-between;
