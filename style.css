@@ -1,4 +1,37 @@
-*{
+/* Custom propietis - variables
+Son datos qie se giardan en el root para reutilizarce a lo largo del codigo.
+el root es un elemendo de css que guarda las propiedades personalizadas a lo largo del codigo
+
+El root es un elemento de css que guarda las propiedades personaliozadas u que podemos usar en el codigo.
+
+
+Sintaxis:
+
+:root {
+  --nombre-variable:  Valor;
+
+}
+
+*/
+
+:root{
+  /* scheme light mode */
+  --base:#2C9EDE;
+  --height:#67BDEE;
+  --shadow:#03080B;
+  --white: #F9F5F5;
+  --black: #030405;
+
+  --shadow-icon:03080B ;
+  --padding-n: 1rem;
+  --padding-s: 0.75rem;
+  --padding-xs:0.5rem;
+  
+}
+
+
+
+ *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,8 +43,8 @@ body{
   justify-content: center;
   align-items: center;  
   height: 100vh;
-  background-color: skyblue;
-  padding: 1rem;
+  background-color: var(--base);
+  padding: var(--padding-n);
 }
 
 img{
@@ -19,7 +52,7 @@ img{
   width: 100%;
 }
 p{
-  font-family: sans-serif;
+  font-family: Montserrat;
 }
 a{
   text-decoration: none;
@@ -29,48 +62,101 @@ button{
   border: none;
 }
 
+
 .card{
   border-radius: 1rem;
-  background-color: red;
+  background-color: var(--white);
   overflow: hidden;
   max-width: 1200px;
 }
 .header{
   display: flex;
   justify-content: space-between;
-  background-color: green;
+  background-color: var(--white);
   align-items: center;
-  padding: 1rem;
+  padding: var(--padding-n);
 }
 
 .brand{
   max-width: 130px;
 }
 .icon{
-  padding: .5rem;
+  width: 42px;
+  height: 42px;
+  padding: var(--padding-xs);
   border-radius: 8px;
-  background-color: blanchedalmond;
-  box-shadow: 0 2px 2px 0 #2f195c10;}
+  background-color: var(--white);
+  box-shadow: 0 2px 2px 0 var(--shadow);}
   
 .main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: cyan;
-  gap: 1rem;
+  background-color: var(--white);
+  gap: 1.41rem;
   padding: 1rem;
 }
 .main div:first-child{
-  background-color: palevioletred;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--base);
+  max-width: 350px;
+  
 }
 
 .main div:last-child{
-  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;/* root f-s= 16px */
+  
+}
+
+.main div:last-child h1{
+  text-align: center;
+  color: rgb(44, 158, 222);
+  font-size: 3rem; /* 48px / 16px =  */
+  line-height: 3rem;
+
+  
+}
+
+.main p {
+  text-align: center;
+  font-size: 1.25rem; /* 20 px / 16px =  */
+  line-height: 1.125rem;
+  
+}
+
+.main a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: var(--base);
+  color: white;
+  font-family: "montserrat", sans-serif;
+
+
 }
 
 .footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: magenta;
+  padding: 1rem;
+  ;
+}
+
+.footer div{
+  display: flex;
+  gap: 1rem;
+  ;
+}
+
+.footer p{
+  font-size: 0.75rem;
 }
