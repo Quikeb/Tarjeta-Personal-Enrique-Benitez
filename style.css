@@ -29,7 +29,16 @@ Sintaxis:
   
 }
 
+body.dark{
 
+      /* scheme dark mode */
+  --base:#67BDEE;
+  --height:#2C9EDE;
+  --shadow:#03080B;
+  --white: #030405;
+  --black: #F9F5F5;
+
+}
 
  *{
   margin: 0;
@@ -45,6 +54,7 @@ body{
   height: 100vh;
   background-color: var(--base);
   padding: var(--padding-n);
+  text-align: center;
 }
 
 img{
