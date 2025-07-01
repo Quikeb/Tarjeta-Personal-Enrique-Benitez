@@ -34,7 +34,7 @@ body.dark{
       /* scheme dark mode */
   --base:#67BDEE;
   --height:#2C9EDE;
-  --shadow:#03080B;
+  --shadow:#2C9EDE;
   --white: #030405;
   --black: #F9F5F5;
 
@@ -55,6 +55,21 @@ body{
   background-color: var(--base);
   padding: var(--padding-n);
   text-align: center;
+}
+.icon svg {
+  stroke: var(--base);
+}
+
+.theme-icon {
+  display: none;
+}
+
+body:not(.dark) #icon-moon{
+  display: block;
+}
+
+body.dark #icon-sun {
+  display: block;
 }
 
 img{
